@@ -12,15 +12,15 @@
       <ion-avatar item-center>
         <img [src] = "data.response.logo_url">
       </ion-avatar>
-        <h2>{{data.response.status}}</h2>
-        <br/>
         <p>{{data.response.company_name}}</p>
         <br/>
-        <p>{{data.response.package_type}}</p>
-        <br/>
-        <ion-note>{{data.response.message}}</ion-note>
-        <br/>
-        <button ion-button block >Login</button>
+          <ion-item>
+            <ion-input type="email" placeholder="Email Input" large></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password Input" large></ion-input>
+          </ion-item>
+          <button ion-button block large clear>Login</button>
     </ion-item>
 </ion-list>
 </ion-content>
