@@ -10,7 +10,7 @@
   <ion-list>
     <ion-item *ngFor="let data of resData">
       <ion-avatar item-center>
-        <img [src] = "data.response.logo_url" >
+        <img [src] = "data.response.logo_url" class="ion-image">
       </ion-avatar>
         <h2>{{data.response.status}}</h2>
         <br/>
@@ -19,6 +19,8 @@
         <p>{{data.response.package_type}}</p>
         <br/>
         <ion-note>{{data.response.message}}</ion-note>
+        <br/>
+        <button ion-button block >Login</button>
     </ion-item>
 </ion-list>
 </ion-content>
