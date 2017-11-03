@@ -38,4 +38,30 @@ export class RestServiceProvider {
       });
     });
   }
+  postr(){
+    if (this.data) {
+      // already loaded data
+      return Promise.resolve(this.data);
+    }
+    let opt2: RequestOptions;
+    let myHeaders: Headers = new Headers;
+
+    myHeaders.set('Accept', 'application/json; charset=utf-8');
+    myHeaders.append('Content-type','application/json; charset=utf-8');
+    opt2 = new RequestOptions({
+      headers : myHeaders
+
+    })
+    var MySecurity="LL9Ny4IF";
+    var MyEmail="you@yourmail.com";
+    var MyPass="12222";
+    return new Promise(resolve =>{
+      this.http.get("https://api.pathola.com/freelance_login_submit.php?email="+MyEmail+"&password=123124",opt2)
+      .map(res => res.json())
+      .subscribe(data => {
+        this.data = data;
+        resolve(this.data);
+      });
+    });
+  }
 }

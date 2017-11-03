@@ -20,5 +20,13 @@ export class HomePage {
     })
 
   }
+  postReq(){
+    this.restServiceProvider.postr()
+    .then(data => {
+      console.log(data);
+      this.resData = data;
+
+    })
+  }
 
 }

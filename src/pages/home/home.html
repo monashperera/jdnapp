@@ -9,12 +9,12 @@
 <ion-content padding>
   <ion-list>
     <ion-item *ngFor="let data of resData">
-      <ion-item >
+      <ion-item style="text-align:center;" >
           <img  [src] = "data.response.logo_url" class="mylogo" >
       </ion-item>
 
 
-        <p>{{data.response.company_name}}</p>
+        <h1 style="text-align:center;">{{data.response.company_name}}</h1>
         <br/>
           <ion-item>
             <ion-input type="email"  placeholder="Email" class="myclass"></ion-input>
@@ -24,5 +24,8 @@
           </ion-item>
           <button ion-button block large class="lbutton">Login</button>
     </ion-item>
+</ion-list>
+<ion-list>
+
 </ion-list>
 </ion-content>
