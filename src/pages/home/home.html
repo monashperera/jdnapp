@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-navbar>
     <ion-title>
@@ -7,6 +8,7 @@
 </ion-header>
 
 <ion-content padding>
+  <!--
   <ion-list>
     <ion-item *ngFor="let data of resData">
       <ion-item style="text-align:center;" >
@@ -17,15 +19,31 @@
         <h1 style="text-align:center;">{{data.response.company_name}}</h1>
         <br/>
           <ion-item>
-            <ion-input type="email"  placeholder="Email" class="myclass"></ion-input>
+
+            <ion-input type="email"  placeholder="you@yourdomain.com" class="myclass"></ion-input>
           </ion-item>
           <ion-item>
             <ion-input type="password" placeholder="Password" class="myclass"></ion-input>
           </ion-item>
-          <button ion-button block large class="lbutton">Login</button>
+          <button ion-button block large class="lbutton" (click)="postRequest()">Login</button>
     </ion-item>
 </ion-list>
 <ion-list>
 
 </ion-list>
+-->
+<!--
+  onsubmit="window.location='http://api.pathola.com/freelance_signin.php?email='+document.getElementById('email').value+'&password='+document.getElementById('password').value;"
+-->
+<iframe src="https://sandbox.pathola.org/" style="border:none;width:100%; height:100%; overflow-x:hidden;  overflow-y:hidden;"></iframe>
+<!--
+<form action="#" method="post" onsubmit="window.location='http://api.pathola.com/freelance_signin.php?email='+document.getElementById('email').value+'&password='+document.getElementById('password').value;">
+
+<input type="email" id="email" name="email" class="myclass" placeholder="you@yourdomain.com" />
+<input type="password" id="password" name="password" class="myclass" placeholder="password" />
+<button>Login</button>
+</form>
+-->
 </ion-content>
+
+
