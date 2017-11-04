@@ -2,13 +2,16 @@
 <ion-header>
   <ion-navbar>
     <ion-title style="text-align:center;" *ngFor="let data of resData">
-        <img  [src] = "data.response.logo_url" class="mylogo" >
         <div  style="font-size:90%;">{{data.response.company_name}}</div>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <div *ngFor="let data of resData" style="text-align:center;" >
+      <img  [src] = "data.response.logo_url" class="mylogo" >
+
+  </div>
   <!--
   <ion-list>
     <ion-item *ngFor="let data of resData">
